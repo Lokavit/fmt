@@ -1,12 +1,12 @@
 import config from "./src/config";
-import * as number from "./src/number";
-import * as date from "./src/date";
 import { fmtText } from "./src/text";
+import { fmtPercent } from "./src/number";
+import * as date from "./src/date";
 
 const fmt = {
   config,
   fmtText,
-  ...number,
+  fmtPercent,
   ...date,
 };
 

@@ -5,7 +5,6 @@ export const TITLE_CASE = "title";
 // 一般描述文本 首个单词首字母大写 （Sentence Case）
 export const SENTENCE_CASE = "sentence";
 
-// 明文格式化 method 
 /**
  * @function 格式化明文
  * @param {string} val 需格式化的数值
