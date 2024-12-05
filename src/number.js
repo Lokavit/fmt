@@ -97,10 +97,10 @@ export const fmtCurrency = (
   //   const curCurrency = localize[locale].currency;
   // console.log(`fmtCurrency curCurrency:`, curCurrency);
   // 小数位数最小值。传入值小数部分的长度&& 小数*1是否＞0
-  const min = decimalPart.length > 0 && decimalPart * 1 > 0 ? 0 : 2;
+  //   const min = decimalPart.length > 0 && decimalPart * 1 > 0 ? 0 : 2;
   // console.log(`fmtCurrency min:`, min);
   // 小数位数最大值
-  const max = decimalPart.length || min;
+  const max = decimalPart.length || config.decimal;
   // console.log(`fmtCurrency max:`, max)
   // 再把整数和小数拼起来。
   const temp = intPart + "." + decimalPart;
@@ -111,7 +111,7 @@ export const fmtCurrency = (
     currency: currency,
     // 定义货币的显示形式（如 'symbol' 显示符号，'code' 显示货币代码，'name' 显示货币名称）。
     currencyDisplay: "symbol",
-    minimumFractionDigits: min,
+    minimumFractionDigits: 0,
     maximumFractionDigits: max, // 显示最多位小数
     // unit: "kilometer-per-hour", // 单位
   }).format(temp);
