@@ -5,6 +5,16 @@ export const TITLE_CASE = "title";
 // 一般描述文本 首个单词首字母大写 （Sentence Case）
 export const SENTENCE_CASE = "sentence";
 
+// 明文格式化 method 
+/**
+ * @function 格式化明文
+ * @param {string} val 需格式化的数值
+ * @param {string} method [title|sentence] 默认为`title`每个单词首字母大写
+ * @return {string} 按照指定代码，包含货币符号的千分格式化
+ * @description 只在类似情况下使用该函数。
+ * @example
+ * fmtText( `hello`);
+ */
 export const fmtText = (val, method = TITLE_CASE) => {
   // 是否为西文
   const isWestern = !config.ignore.includes(config.lgre);

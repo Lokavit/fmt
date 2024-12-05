@@ -6,9 +6,9 @@ import * as text from "./src/text";
 
 const fmt = {
   config,
-  number,
-  date,
-  text,
+  ...number,
+  ...date,
+  ...text,
 };
 
 export default fmt;
