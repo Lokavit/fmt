@@ -1,13 +1,23 @@
 import config from "./src/config";
 import { fmtText } from "./src/text";
-import { fmtPercent } from "./src/number";
-import * as date from "./src/date";
+import {
+  fmtPercent,
+  fmtNumber,
+  fmtCrypto,
+  fmtCurrency,
+  fmtQTY,
+} from "./src/number";
+import {fmtToHMS} from "./src/date";
 
 const fmt = {
   config,
   fmtText,
   fmtPercent,
-  ...date,
+  fmtNumber,
+  fmtCrypto,
+  fmtCurrency,
+  fmtQTY,
+  fmtToHMS,
 };
 
 export default fmt;
